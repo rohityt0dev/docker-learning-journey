@@ -41,19 +41,6 @@ Runs consistently everywhere
 | **Docker Hub** | Registry for sharing Docker images |
 | **Docker Engine** | Technology that builds and runs containers |
 
-## Example
-
-Run an Nginx container:
-
-```bash
-docker run -d -p 8080:80 nginx
-```
-
-Then open:
-
-```text
-http://localhost:8080
-```
 
 ## Docker Benefits
 
