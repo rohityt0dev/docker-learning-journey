@@ -144,4 +144,126 @@ View Docker logs:
 ```bash
 sudo journalctl -u docker
 ```
+# Docker Installation — Amazon Linux 2023
 
+This guide explains how to install and configure Docker on an **Amazon Linux 2023 EC2 instance**.
+
+---
+
+## Step 1 — Connect to EC2
+
+Connect to your Amazon Linux EC2 instance using SSH.
+
+```bash
+ssh -i your-key.pem ec2-user@<EC2-PUBLIC-IP>
+```
+
+---
+
+## Step 2 — Check the Current User
+
+```bash
+whoami
+```
+
+Expected:
+
+```text
+ec2-user
+```
+
+---
+
+## Step 3 — Update the System
+
+Update the installed packages:
+
+```bash
+sudo yum update -y
+```
+
+---
+
+## Step 4 — Install Docker
+
+Install Docker:
+
+```bash
+sudo yum install docker -y
+```
+
+Verify the installation:
+
+```bash
+docker --version
+```
+
+Example:
+
+```text
+Docker version 25.x.x
+```
+
+---
+
+## Step 5 — Start Docker
+
+Start the Docker service:
+
+```bash
+sudo systemctl start docker
+```
+
+Check the status:
+
+```bash
+sudo systemctl status docker
+```
+
+Expected:
+
+```text
+Active: active (running)
+```
+
+Press `q` to exit the status screen.
+
+---
+
+## Step 6 — Enable Docker at Boot
+
+Enable Docker to start automatically after reboot:
+
+```bash
+sudo systemctl enable docker
+```
+
+---
+
+## Step 7 — Add `ec2-user` to Docker Group
+
+This allows `ec2-user` to run Docker commands without `sudo`.
+
+```bash
+sudo usermod -a -G docker ec2-user
+```
+
+---
+
+## Step 8 — Test Docker
+
+Check Docker information:
+
+```bash
+docker info
+```
+
+Run the Docker test container:
+
+```bash
+docker run hello-world
+```
+
+Docker should download the `hello-world` image and display a success message.
+
+---
