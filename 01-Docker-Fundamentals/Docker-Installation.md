@@ -46,12 +46,7 @@ echo \
 ```bash
 sudo apt update
 
-sudo apt install -y \
-  docker-ce \
-  docker-ce-cli \
-  containerd.io \
-  docker-buildx-plugin \
-  docker-compose-plugin
+sudo apt install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin -y
 ```
 
 ## Verify Installation
@@ -150,18 +145,3 @@ View Docker logs:
 sudo journalctl -u docker
 ```
 
-## Windows & macOS
-
-For Windows and macOS, the recommended approach for beginners is **Docker Desktop**.
-
-Docker Desktop provides:
-
-- Docker Engine
-- Docker CLI
-- Docker Compose
-- Docker Build
-- Container management
-
-### Key Point
-
-> **Install Docker Engine on Linux, or use Docker Desktop on Windows/macOS. After installation, verify it with `docker --version` and `docker run hello-world`.**
