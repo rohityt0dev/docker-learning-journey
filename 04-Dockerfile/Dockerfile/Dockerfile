@@ -26,5 +26,3 @@ ENTRYPOINT ["python3", "-m", "http.server"]
 
 # CMD: Default arguments for ENTRYPOINT
 CMD ["8080", "--bind", "0.0.0.0"]
-~
-~
