@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Docker Website</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>🐳 Welcome to My Docker Website</h1>
+        <p>My First Static Website Running in a Docker Container</p>
+    </header>
+
+    <main>
+        <section class="card">
+            <h2>About This Project</h2>
+            <p>
+                This website is created using HTML and CSS
+                and hosted inside a Docker container using Nginx.
+            </p>
+        </section>
+
+        <section class="card">
+            <h2>What I Learned</h2>
+            <ul>
+                <li>Dockerfile creation</li>
+                <li>Docker image building</li>
+                <li>Docker container management</li>
+                <li>Port mapping</li>
+                <li>Hosting a static website using Nginx</li>
+            </ul>
+        </section>
+
+        <section class="card">
+            <h2>Docker Commands</h2>
+            <code>docker build -t my-static-website:v1 .</code>
+            <br><br>
+            <code>docker run -d -p 8080:80 my-static-website:v1</code>
+        </section>
+    </main>
+
+    <footer>
+        <p>Created as part of my Docker Learning Journey 🚀</p>
+    </footer>
+
+</body>
+</html>
