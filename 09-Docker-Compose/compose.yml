@@ -1,0 +1,14 @@
+services:
+  web:
+    image: nginx:latest
+    container_name: nginx-web
+    ports:
+      - "8080:80"
+    restart: unless-stopped
+
+  app:
+    image: httpd:latest
+    container_name: apache-web
+    ports:
+      - "8081:80"
+    restart: unless-stopped
