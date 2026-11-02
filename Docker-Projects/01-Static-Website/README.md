@@ -130,8 +130,3 @@ docker rmi my-static-website:v1
 - Configure HTTPS using a reverse proxy.
 - Automate deployment using Jenkins CI/CD.
 
-## 👨‍💻 Author
-
-Docker Learning Journey — Project 01
-
-**Status:** Completed
