@@ -131,7 +131,3 @@ The database data persists when containers are removed and recreated, provided t
 - Do not use example credentials in production.
 - Restrict published ports to trusted interfaces.
 - Use appropriate authentication and network controls.
-
-## 👨‍💻 Author
-
-Add your name and GitHub profile here.
